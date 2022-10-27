@@ -18,7 +18,18 @@ namespace OOStepByStepTest
             // when
             string introduce = student.Introduce;
             // then
-            Assert.Equal("My name is Tom. I am 18 years old. I am a student", introduce);
+            Assert.Equal("My name is Tom. I am 18 years old. I am a student of class 3", introduce);
+        }
+
+        [Fact]
+        public void Should_return_greeting_with_job_class_teacher_when_introduce_given_teacher_with_name_age_job_class()
+        {
+            // given
+            SchoolPersonWithClassNumber teacher = new SchoolPersonWithClassNumber("Tom", 18, "teacher", 3);
+            // when
+            string introduce = teacher.Introduce;
+            // then
+            Assert.Equal("My name is Tom. I am 18 years old. I am a student of class 3", introduce);
         }
     }
 }

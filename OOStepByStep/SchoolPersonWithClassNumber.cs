@@ -21,6 +21,6 @@ namespace OOStepByStep
         public string Job { get; set; }
         public int ClassNumber { get; set; }
 
-        public string Introduce => $"My name is {Name}. I am {Age} years old. I am a {Job}";
+        public string Introduce => $"My name is {Name}. I am {Age} years old. I am a student of class {ClassNumber}";
     }
 }
