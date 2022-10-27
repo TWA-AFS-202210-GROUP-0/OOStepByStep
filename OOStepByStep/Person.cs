@@ -1,4 +1,4 @@
-﻿namespace OOStepByStepTest
+﻿namespace OOStepByStep
 {
     public class Person
     {
