@@ -22,5 +22,14 @@ namespace OOStepByStep
         public int ClassNumber { get; set; }
 
         public string Introduce => $"My name is {Name}. I am {Age} years old. I am a student of class {ClassNumber}";
+        public string Welcome(SchoolPersonWithClassNumber student)
+        {
+            if (student.ClassNumber == ClassNumber)
+            {
+                return $"My name is {Name}. I am {Age} years old. I am a student of class {ClassNumber}. Welcome Jim join class {ClassNumber}";
+            }
+
+            return " ";
+        }
     }
 }
