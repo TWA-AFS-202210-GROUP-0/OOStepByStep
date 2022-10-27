@@ -22,5 +22,7 @@ namespace OOStepByStep
             return introduceMessage;
         }
 
+        public string ClassName { get => className; }
+
     }
 }

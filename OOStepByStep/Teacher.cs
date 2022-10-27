@@ -1,4 +1,6 @@
-﻿namespace OOStepByStep
+﻿using System;
+
+namespace OOStepByStep
 {
     public class Teacher : Person
     {
@@ -20,6 +22,16 @@
             return introduceMessage;
         }
 
-
+        public string WellcomeNewStudent(Student newStudent)
+        {
+          if (newStudent.ClassName == className)
+            {
+                return $"{IntroduceMyself()} Welcome {newStudent.Name} join {className}.";
+            }
+            else
+            {
+                return string.Empty;
+            }
+        }
     }
 }

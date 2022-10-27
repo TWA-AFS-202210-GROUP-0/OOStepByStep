@@ -15,10 +15,7 @@
             return $"My name is {name}. I am {age} years old.";
         }
 
-        //public string Name
-        //{
-        //    get { return name; }
-        //}
+        public string Name { get => name; }
 
         //public int Age { get { return age; } }
     }
