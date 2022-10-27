@@ -78,7 +78,8 @@ namespace OOStepByStepTest
         public void Should_return_welcome_message_when_welcome_new_student_given_teacher_name_Amy_age_30_class_2_new_student_name_Jim()
         {
             // given
-            Student newStudent = new Student("Jim", 18, "class 2"); 
+            Student newStudent = new Student("Jim", 18, "class 2");
+
             Teacher teacher = new Teacher("Amy", 30, "class 2");
 
             // when
@@ -88,5 +89,19 @@ namespace OOStepByStepTest
             Assert.Equal("My name is Amy. I am 30 years old. I am a teacher of class 2. Welcome Jim join class 2.", message);
         }
 
+        [Fact]
+        public void Should_return_welcome_message_when_welcome_new_student_given_class_2_has_Tom_new_student_name_Jim()
+        {
+            // given
+            SchoolClass schoolClass = new SchoolClass("class 2");
+            Student oldStudent = new Student("Tom", 18, "class 2");
+            schoolClass.AddNewStudentWellcome(oldStudent);
+            Student newStudent = new Student("Jim", 18, "class 2");
+            // when
+            string message = schoolClass.AddNewStudentWellcome(newStudent);
+
+            // then
+            Assert.Equal("My name is Tom. I am 18 years old. I am a student of class 2. Welcome Jim join class 2.\n", message);
+        }
     }
 }

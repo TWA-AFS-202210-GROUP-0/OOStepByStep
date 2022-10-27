@@ -22,6 +22,18 @@ namespace OOStepByStep
             return introduceMessage;
         }
 
+        public string WellcomeNewStudent(Student newStudent)
+        {
+            if (newStudent.ClassName == className)
+            {
+                return $"{IntroduceMyself()} Welcome {newStudent.Name} join {className}.";
+            }
+            else
+            {
+                return string.Empty;
+            }
+        }
+
         public string ClassName { get => className; }
 
     }
