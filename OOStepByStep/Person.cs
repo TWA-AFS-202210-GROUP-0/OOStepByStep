@@ -13,7 +13,7 @@
         public string Name { get => name; set => name = value; }
         public int Age { get => age; set => age = value; }
 
-        public string Introduce()
+        public virtual string Introduce()
         {
             return $"My name is {this.name}. I am {this.age} years old.";
         }
