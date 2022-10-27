@@ -13,7 +13,18 @@ namespace OOStepByStepTest
             // when
             var msg = person.Introduce();
             // then
-            Assert.Equal(msg, "My name is Tom. I am 21 years old");
+            Assert.Equal("My name is Tom. I am 21 years old", msg);
+        }
+
+        [Fact]
+        public void Should_student_can_introduce_himself()
+        {
+            // given
+            var student = new Student("Tom", 18);
+            // when
+            var msg = student.Introduce();
+            // then
+            Assert.Equal("My name is Tom. I am 18 years old. I am a student", msg);
         }
     }
 }
