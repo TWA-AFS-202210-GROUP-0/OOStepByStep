@@ -13,9 +13,20 @@ namespace OOStepByStep
         {
         }
 
+        public Student(string name, int age, bool isBelongsToClass, int classNumber) : base(name, age, isBelongsToClass, classNumber)
+        {
+        }
+
         public override string Introduce()
         {
-            return base.Introduce() + ". I am a student";
+            if (isBelongsToClass)
+            {
+                return base.Introduce() + $". I am a student of class {this.classNumber}";
+            }
+            else
+            {
+                return base.Introduce() + ". I am a student";
+            }
         }
     }
 }
