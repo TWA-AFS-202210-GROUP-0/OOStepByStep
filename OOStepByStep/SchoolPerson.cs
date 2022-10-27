@@ -21,5 +21,10 @@
         {
             return base.Introduce();
         }
+
+        public virtual string Welcome(SchoolPerson newStudent)
+        {
+            return $" Welcome {newStudent.Name} join class {newStudent.classNumber}.";
+        }
     }
 }

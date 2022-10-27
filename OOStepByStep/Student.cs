@@ -22,5 +22,17 @@
                 return base.Introduce() + $" I am a student.";
             }
         }
+
+        public override string Welcome(SchoolPerson newStudent)
+        {
+            if (this.IsBelongClass & this.ClassNumber == newStudent.ClassNumber)
+            {
+                return this.Introduce() + base.Welcome(newStudent);
+            }
+            else
+            {
+                return this.Introduce();
+            }
+        }
     }
 }
