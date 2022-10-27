@@ -12,14 +12,14 @@
 
         public virtual string IntroduceMyself()
         {
-            return $"My name is {Name}. I am {Age} years old.";
+            return $"My name is {name}. I am {age} years old.";
         }
 
-        public string Name
-        {
-            get { return name; }
-        }
+        //public string Name
+        //{
+        //    get { return name; }
+        //}
 
-        public int Age { get { return age; } }
+        //public int Age { get { return age; } }
     }
 }
