@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace OOStepByStep
 {
-    public interface IPerson
+    public interface ISchoolPerson : IPerson
     {
-        string Name { get; set; }
-        int Age { get; set; }
-        string Introduce { get; }
+        string Job { get; set; }
     }
 }
