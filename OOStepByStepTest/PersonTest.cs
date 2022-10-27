@@ -16,7 +16,7 @@ namespace OOStepByStepTest
             // given
             Person person = new Person("Tom", 21);
             // when
-            string greeting = person.Greeting();
+            string greeting = person.Greeting;
             // then
             Assert.Equal("My name is Tom. I am 21 years old", greeting);
         }

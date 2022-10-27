@@ -6,20 +6,17 @@ using System.Threading.Tasks;
 
 namespace OOStepByStep
 {
-    public class Person
+    public class Person : IPerson
     {
-        private string name;
-        private int age;
-
         public Person(string name, int age)
         {
-            this.name = name;
-            this.age = age;
+            Name = name;
+            Age = age;
         }
 
-        public string Greeting()
-        {
-            return $"My name is {this.name}. I am {this.age} years old";
-        }
+        public string Name { get; set; }
+        public int Age { get; set; }
+
+        public string Greeting => $"My name is {Name}. I am {Age} years old";
     }
 }
