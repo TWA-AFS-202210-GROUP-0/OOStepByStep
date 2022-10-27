@@ -28,6 +28,17 @@ namespace OOStepByStepTest
         }
 
         [Fact]
+        public void Should_return_name_and_age_and_occupation_when_intro_given_student_and_class()
+        {
+            // given
+            var student = new Student("Tom", 21, true, 2);
+            // when
+            var words = student.Introduce();
+            // then
+            Assert.Equal("My name is Tom. I am 21 years old. I am a student of class 2.", words);
+        }
+
+        [Fact]
         public void Should_return_name_and_age_and_occupation_when_intro_given_teacher()
         {
             // given
@@ -39,14 +50,14 @@ namespace OOStepByStepTest
         }
 
         [Fact]
-        public void Should_return_name_and_age_and_occupation_when_intro_given_student_and_class()
+        public void Should_return_name_and_age_and_occupation_when_intro_given_teacher_and_class()
         {
             // given
-            var student = new Student("Tom", 21, 2);
+            var teacher = new Teacher("Amy", 30, true, 2);
             // when
-            var words = student.Introduce();
+            var words = teacher.Introduce();
             // then
-            Assert.Equal("My name is Tom. I am 21 years old. I am a student of class 2.", words);
+            Assert.Equal("My name is Amy. I am 30 years old. I am a teacher of class 2.", words);
         }
     }
 }
