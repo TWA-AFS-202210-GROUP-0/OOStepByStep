@@ -14,6 +14,14 @@ namespace OOStepByStep
 
         public string AddNewStudent(Student newStudent)
         {
+            var welcome = Welcome(newStudent);
+            newStudent.ClassNumber = ClassNumber;
+            Students.Add(newStudent);
+            return welcome;
+        }
+
+        private string Welcome(Student newStudent)
+        {
             string welcome = string.Empty;
             foreach (var student in Students)
             {
@@ -21,8 +29,6 @@ namespace OOStepByStep
             }
 
             welcome += Teacher.IntroduceWithClass() + $" Welcome {newStudent.Name} join class {ClassNumber}.\n";
-            newStudent.ClassNumber = ClassNumber;
-            Students.Add(newStudent);
             return welcome;
         }
     }
